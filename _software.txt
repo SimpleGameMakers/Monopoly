@@ -1,0 +1,17 @@
+Unity Personal:
+	https://store.unity.com/ru/download?ref=personal
+
+Blender:
+	https://www.blender.org/download/
+	
+Krita:
+	https://krita.org/en/download/
+	
+Gimp:
+	https://www.gimp.org/downloads/
+	
+Inkscape:
+	https://inkscape.org/en/release/0.92.3/
+
+Audacity:
+	https://www.audacityteam.org/download/
