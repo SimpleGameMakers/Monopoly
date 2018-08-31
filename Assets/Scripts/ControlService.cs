@@ -1,11 +1,10 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ControlService : Service
 {
-
     private List<Entity> _SelectedEntities;
 
 
@@ -24,7 +23,6 @@ public class ControlService : Service
         {
             DeselectAll();
         };
-
     }
 
 

@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 
 public class EventService : Service
 {
@@ -42,8 +41,5 @@ public class EventService : Service
             }
         };
     }
-
-
-
-
+    
 }

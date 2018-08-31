@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
+
 [RequireComponent(typeof(Collider))]
 public abstract class Entity : MonoBehaviour
 {
