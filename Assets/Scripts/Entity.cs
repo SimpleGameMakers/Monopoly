@@ -2,23 +2,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
 
 
 [RequireComponent(typeof(Collider))]
 public abstract class Entity : MonoBehaviour
 {
-    public event Action Click = delegate { };
+    public virtual void Select()
+    {
+        /* empty */
+    }
+
+
+    public virtual void Deselect()
+    {
+        /* empty */
+    }
 
 
     protected virtual void Awake()
     {
-        ServiceManager.EventService.RegisterEvents(this);
+        /* empty */
     }
 
 
-    protected void OnMouseDown()
+    protected virtual void Start()
+    { 
+        /* empty */
+    }
+
+
+    protected virtual void Update()
     {
-        Click.Invoke();
+        /* empty */
     }
 
 }
