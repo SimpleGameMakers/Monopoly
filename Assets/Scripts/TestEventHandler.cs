@@ -8,11 +8,7 @@ public class TestEventHandler : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        ServiceManager.EventService.EntityClick += (Entity e) =>
-        {
-            e.gameObject.GetComponent<Renderer>().material.color = Color.red;
-            Debug.Log(e.name);
-        };
+        ServiceManager.Initialize();
     }
 
     // Update is called once per frame
