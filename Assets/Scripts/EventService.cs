@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 
 public class EventService : Service
 {
@@ -54,7 +53,6 @@ public class EventService : Service
             }
         };
     }
-
 }
 
 
@@ -64,7 +62,6 @@ public struct GameObjectClickData
     public GameObject Target;
     public Vector3 ClickPoint;
 }
-
 
 public struct EntityClickData
 {
