@@ -53,10 +53,6 @@ public class EventService : Service
             }
         };
     }
-<<<<<<< HEAD
-    
-=======
-
 }
 
 
@@ -67,10 +63,8 @@ public struct GameObjectClickData
     public Vector3 ClickPoint;
 }
 
-
 public struct EntityClickData
 {
     public MouseButton MouseButton;
     public Entity Target;
->>>>>>> 4b3b9fa802232105b9e539f6c7ca9ad66f87006d
 }

@@ -62,6 +62,16 @@ public class ControlService : Service
         _selectedEntities.ForEach(e => e.Deselect());
         _selectedEntities.Clear();
     }
+
+
+    protected override void Awake()
+    {
+        base.Awake();
+        _actorTaskProvider = TaskProvider.Create<ActorTaskProviderControl>();
+        _selectedEntities = new List<Entity>();
+        RegisterEvents();
+    }
+
 }
 
 
