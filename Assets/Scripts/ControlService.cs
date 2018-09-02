@@ -73,14 +73,3 @@ public class ControlService : Service
     }
 
 }
-
-
-    protected override void Awake()
-    {
-        base.Awake();
-        _actorTaskProvider = TaskProvider.Create<ActorTaskProviderControl>();
-        _selectedEntities = new List<Entity>();
-        RegisterEvents();
-    }
-
-}
