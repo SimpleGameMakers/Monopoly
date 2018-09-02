@@ -8,27 +8,63 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Collider))]
 public abstract class Entity : MonoBehaviour
 {
-    public virtual void Select()
+    public static T Create<T>(string name) where T : Entity
+    {
+        GameObject gameObject = new GameObject(name);
+        return gameObject.AddComponent<T>();
+    }
+
+    #region ProcessMessage
+    public virtual void Process(TaskProvider taskProvider)
     {
         /* empty */
+    }
+
+
+    public virtual void Process(Task task)
+    {
+        /* empty */
+    }
+
+
+    public virtual void Process(Command command)
+    {
+        /* empty */
+    }
+    #endregion
+
+    #region Select/Deselect
+    private bool _isSelected;
+
+
+    public bool IsSelected()
+    {
+        return _isSelected;
+    }
+
+
+    public virtual void Select()
+    {
+        _isSelected = true;
     }
 
 
     public virtual void Deselect()
     {
-        /* empty */
+        _isSelected = false;
     }
+    #endregion
 
-
-    protected virtual void Awake()
+    #region MonoBehaviour
+    protected virtual void OnValidate()
     {
         /* empty */
     }
 
 
     protected virtual void Start()
-    { 
-        /* empty */
+    {
+        _isSelected = false;
     }
 
 
@@ -36,5 +72,5 @@ public abstract class Entity : MonoBehaviour
     {
         /* empty */
     }
-
+    #endregion
 }
